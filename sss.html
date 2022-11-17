@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="input"onkeyup="myFunction()">   
+    <div id="autoComplete">
+        <input onkeyup="search(this.value)" type="text" id="myInput" 
+         placeholder="Type to Search "/>
+       <p id="rockk"><i class="fa-sharp fa-solid fa-circle-plus" style="margin-left: 5%; padding:13px 6px 9px 13px;"></i>
+        <span onclick="change()">Add</span></p>
+        <div id="dropdown" style="color: black;">
+        </div>
+    </div>
+</div>
+
+<style>
+#autoComplete {
+    display: inline-block;
+    width: 90%;
+    /* margin:auto; */
+}
+#autoComplete input {
+    width: 29%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid lightslategrey;
+    outline: none;
+}
+#dropdown {
+    position: absolute;
+    z-index: 1;   
+    border: 1px solid white;
+    width: 26%;
+    max-height: 200px;
+    transition: 0.5s;
+    overflow: auto;
+    box-sizing: border-box;
+    display:none;
+    background:#f6f6f6;
+}
+
+#dropdown.active{
+    display: block;
+    color: black;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white;
+    margin-top: 0px;
+    padding-left: 8px;
+}
+
+#dropdown .option{
+    height: 30px;
+    /* padding-left: 10px; */
+    display: flex;
+    align-items: center;
+}
+
+#dropdown .option:hover{
+  background-color: rgb(234, 234, 234);
+  cursor: pointer;
+}
+
+#dropdown.option:last-child{
+    border: 0px;
+}
+
+#autoComplete input[type=text]:focus {
+    border: 2px solid black;
+   }
+
+   .show {display: block;}
+
+   #rockk {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 29%;
+    margin-top: 0px;
+    display: none;
+ }
+
+ #rockk:hover, .rockk:hover > a:visited {
+    background-color:whitesmoke;
+}         
+      </style>
+   
+<script>
+   let searchKeyword = "";
+let options = [
+  { value: "Add", label: "Add"},
+  { value: "boll", label: "boll" },
+  { value: "Tiger", label: "Tiger" },
+  { value: "Animals", label: "Animals" },
+  { value: "cat", label: "cat" },
+  { value: "colony", label: "colony" },
+  { value: "Surat", label: "Surat" }
+];
+function search(value) {
+  searchKeyword = value;
+  loadOptions();
+}
+function loadOptions() {
+  let dropdownElement = document.querySelector("#autoComplete #dropdown");
+  dropdownElement.innerHTML = "";
+  let filteredOptions = searchKeyword == "" ? options : options.filter((option) => option.label.toLowerCase().includes(searchKeyword.toLowerCase()));
+  filteredOptions.forEach((option) => {
+    let optionElement = document.createElement("div");
+    optionElement.classList.add("option");
+    optionElement.innerHTML = option.label;
+    optionElement.addEventListener("click", (event) => {
+      hideDropdown();
+      let selectedValue = event.target.innerHTML;
+      document.querySelector("#autoComplete input").value = selectedValue;
+    })
+    dropdownElement.appendChild(optionElement);
+  })
+}
+
+loadOptions();
+document.querySelector("#autoComplete input").addEventListener("click", (event) => {
+  event.stopPropagation();
+  showDropdown();
+});
+
+function showDropdown() {
+  let dropdownElement = document.querySelector("#autoComplete #dropdown");
+  dropdownElement.classList.add("active");
+}
+function hideDropdown() {
+  let dropdownElement = document.querySelector("#autoComplete #dropdown");
+  dropdownElement.classList.remove("active");
+}
+
+document.addEventListener("click", function handleClickOutsideBox(event) {
+  document.getElementById("dropdown").classList.remove("active");
+});
+
+function change(){
+	var txt = "Nick";
+	document.getElementById("myInput").value = txt;
+}
+
+function myFunction() {
+  var x = document.getElementById("rockk");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function change() {
+  var x = document.getElementById("rockk");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+// function myFunc() {
+//         var x = document.getElementById("myInput").value;
+//         document.getElementById("dropdown").innerHTML = x;
+//     }
+</script>
+
+
+

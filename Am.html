@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+ <html>
+    <title>Array Method</title>
+    <script src="./Am.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <body>
+      <h2>Array Method MultiType Use</h2>
+       <p id="vvvv"></p>
+       
+    </body>
+    <script>
+      // let text = "";
+      const plants = [
+    {
+      "name": "Alder",
+      "species": "Alnus"
+    },
+    {
+      "name": "Black alder",
+      "species": "Alnus glutinosa, Ilex verticillata"
+    },
+    {
+      "name": "Common alder",
+      "species": "Alnus glutinosa"
+    },
+    {
+      "name": "False alder",
+      "species": "Ilex verticillata"
+    },
+    {
+      "name": "Gray alder",
+      "species": "Alnus incana"
+    },
+    {
+      "name": "Speckled alder",
+      "species": "Alnus incana"
+    },
+    {
+      "name": "Striped alder",
+      "species": "Ilex verticillata"
+    },
+    {
+      "name": "White alder",
+      "species": "Alnus incana, Ilex verticillata"
+    },
+    {
+      "name": "Almond",
+      "species": "Prunus amygdalus"
+    },
+    {
+      "name": "Tall ambrosia",
+      "species": "Ambrosia trifida"
+    },
+    {
+      "name": "Amy root",
+      "species": "Apocynum cannabinum"
+    },
+    {
+      "name": "Apple",
+      "species": "Malus domestica"
+    },
+    {
+      "name": "apple",
+      "species": "Maclura pomifera"
+    },
+    {
+      "name": "Apple of Sodom",
+      "species": "Solanum carolinense"
+    },
+    {
+      "name": "Apricot",
+      "species": "Prunus armeniaca"
+    },
+    {
+      "name": "Arfaj",
+      "species": "Rhanterium epapposum"
+    },
+    {
+      "name": "Arizona sycamore",
+      "species": "Platanus wrighitii"
+    },
+    {
+      "name": "Arrowwood",
+      "species": "Cornus florida"
+    },
+    {
+      "name": "Indian arrowwood",
+      "species": "Cornus florida"
+    },
+    {
+      "name": "Ash",
+      "species": "Fraxinus spp."
+    },
+    {
+      "name": "Black ash",
+      "species": "Acer negundo, Fraxinus nigra"
+    },
+    {
+      "name": "Blue ash",
+      "species": "Fraxinus pennsylvanica"
+    },
+    {
+      "name": "Cane ash",
+      "species": "Fraxinus americana"
+    },
+    {
+      "name": "Green ash",
+      "species": "Fraxinus pennsylvanica"
+    },
+    {
+      "name": "Maple ash",
+      "species": "Acer negundo"
+    },
+    {
+      "name": "Red ash",
+      "species": "Fraxinus pennsylvanica"
+    },
+    {
+      "name": "River ash",
+      "species": "Fraxinus pennsylvanica"
+    },
+    {
+      "name": "Swamp ash",
+      "species": "Fraxinus pennsylvanica"
+    },
+    {
+      "name": "White ash",
+      "species": "Fraxinus americana"
+    },
+    {
+      "name": "Water ash",
+      "species": "Acer negundo, Fraxinus pennsylvanica"
+    },
+    {
+      "name": "Azolla",
+      "species": "Azolla"
+    },
+    {
+      "name": "Carolina azolla",
+      "species": "Azolla caroliniana"
+    },
+    {
+      "name": "Bamboo",
+      "species": "Bambuseae"
+    },
+    {
+      "name": "Banana",
+      "species": "mainly Musa × paradisica, but also other Musa species and hybrids"
+    },
+    {
+      "name": "Baobab",
+      "species": "Adansonia"
+    },
+    {
+      "name": "Bay",
+      "species": "Laurus spp. or Umbellularia spp."
+    },
+    {
+      "name": "Bay laurel",
+      "species": "Laurus nobilis (culinary)"
+    },
+    {
+      "name": "California bay",
+      "species": "Umbellularia californica"
+    },
+    {
+      "name": "Bean",
+      "species": "Fabaceae, specifically Phaseolus spp."
+    },
+    {
+      "name": "Bearberry",
+      "species": "Ilex decidua"
+    },
+    {
+      "name": "Bear corn",
+      "species": "Veratrum viride"
+    },
+    {
+      "name": "Beech",
+      "species": "Fagus"
+    },
+    {
+      "name": "Blue bindweed",
+      "species": "Solanum dulcamara"
+    },
+    {
+      "name": "Bird's nest",
+      "species": "Daucus carota"
+    },
+    {
+      "name": "Bird's nest plant",
+      "species": "Daucus carota"
+    },
+    {
+      "name": "Birch",
+      "species": "Betula spp."
+    },
+    {
+      "name": "Black birch",
+      "species": "Betula lenta, Betula nigra"
+    },
+    {
+      "name": "Bolean birch",
+      "species": "Betula papyrifera"
+    },
+    {
+      "name": "Canoe birch",
+      "species": "Betula papyrifera"
+    },
+    {
+      "name": "Cherry birch",
+      "species": "Betula lenta"
+    },
+    {
+      "name": "European weeping birch",
+      "species": "Betula pendula"
+    },
+    {
+      "name": "European white birch",
+      "species": "Betula pendula"
+    },
+    {
+      "name": "Gray birch",
+      "species": "Betula alleghaniensis"
+    },
+    {
+      "name": "Mahogany birch",
+      "species": "Betula lenta"
+    },
+    {
+      "name": "Paper birch",
+      "species": "Betula papyrifera"
+    },
+    {
+      "name": "Red birch",
+      "species": "Betula nigra"
+    },
+    {
+      "name": "River birch",
+      "species": "Betula nigra, Betula lenta"
+    },
+    {
+      "name": "Silver birch",
+      "species": "Betula papyrifera"
+    },
+    {
+      "name": "Spice birch",
+      "species": "Betula lenta"
+    },
+    {
+      "name": "Sweet birch",
+      "species": "Betula lenta"
+    },
+    {
+      "name": "Water birch",
+      "species": "Betula nigra"
+    },
+    {
+      "name": "Weeping birch",
+      "species": "Betula pendula"
+    },
+    {
+      "name": "White birch",
+      "species": "Betula papyrifera, Betula pendula"
+    },
+    {
+      "name": "Yellow birch",
+      "species": "Betula alleghaniensis"
+    },
+    {
+      "name": "Bittercress",
+      "species": "Barbarea vulgaris, Cardamine bulbosa, Cardamine hirsuta"
+    },
+    {
+      "name": "Hairy bittercress",
+      "species": "Cardamine hirsuta"
+    },
+    {
+      "name": "Bittersweet",
+      "species": "Solanum dulcamara"
+    },
+    {
+      "name": "Trailing bittersweet",
+      "species": "Solanum dulcamara"
+    },
+    {
+      "name": "Bitterweed",
+      "species": "Any plant in the Ambrosia genus, specially Ambrosia artemisiifolia, Artemisia trifida, Helenium amarum"
+    },
+    {
+      "name": "Blackberry",
+      "species": "Rubus spp., Rubus pensilvanicus, Rubus occidentalis"
+    },
+    {
+      "name": "Hispid swamp blackberry",
+      "species": "Rubus hispidus"
+    },
+    {
+      "name": "Pennsylvania blackberry",
+      "species": "Rubus pensilvanicus"
+    },
+    {
+      "name": "Running swamp blackberry",
+      "species": "Rubus hispidus"
+    },
+    {
+      "name": "Black cap",
+      "species": "Rubus occidentalis"
+    },
+    {
+      "name": "Black-eyed Susan",
+      "species": "Rudbeckia hirta, Rudbeckia fulgida"
+    },
+    {
+      "name": "Blackhaw",
+      "species": "Viburnum prunifolium"
+    },
+    {
+      "name": "Blackiehead",
+      "species": "Rudbeckia hirta"
+    },
+    {
+      "name": "Black-weed",
+      "species": "Ambrosia artemisiifolia"
+    },
+    {
+      "name": "Blueberry",
+      "species": "Vaccinium (Cyanococcus) spp."
+    },
+    {
+      "name": "Blue-of-the-heavens",
+      "species": "Allium caeruleum"
+    },
+    {
+      "name": "Bow-wood",
+      "species": "Maclura pomifera"
+    },
+    {
+      "name": "Box",
+      "species": "Buxus"
+    },
+    {
+      "name": "False box",
+      "species": "Cornus florida"
+    },
+    {
+      "name": "Boxelder",
+      "species": "Acer negundo"
+    },
+    {
+      "name": "Boxwood",
+      "species": "Buxus, Cornus florida"
+    },
+    {
+      "name": "False boxwood",
+      "species": "Cornus florida"
+    },
+    {
+      "name": "Sand brier",
+      "species": "Solanum carolinense"
+    },
+    {
+      "name": "Brittlebush",
+      "species": "Encelia farinosa"
+    },
+    {
+      "name": "Broadleaf",
+      "species": "Plantago major"
+    },
+    {
+      "name": "Brown Betty",
+      "species": "Rudbeckia hirta"
+    },
+    {
+      "name": "Brown-eyed Susan",
+      "species": "Rudbeckia hirta, Rudbeckia triloba"
+    },
+    {
+      "name": "Buckeye (California buckeye)",
+      "species": "Aesculus californica"
+    },
+    {
+      "name": "buckeye",
+      "species": "Aesculus spp."
+    },
+    {
+      "name": "Buffalo weed",
+      "species": "Ambrosia trifida"
+    },
+    {
+      "name": "Butterfly flower",
+      "species": "Asclepias syriaca"
+    },
+    {
+      "name": "Butterfly weed",
+      "species": "Asclepias tuberosa"
+    },
+    {
+      "name": "Cabbage",
+      "species": "Brassica oleracea"
+    },
+    {
+      "name": "Clumpfoot cabbage",
+      "species": "Symplocarpus foetidus"
+    },
+    {
+      "name": "Meadow cabbage",
+      "species": "Symplocarpus foetidus"
+    },
+    {
+      "name": "Skunk cabbage",
+      "species": "Symplocarpus foetidus, Lysichiton spp."
+    },
+    {
+      "name": "Swamp cabbage",
+      "species": "Symplocarpus foetidus"
+    },
+    {
+      "name": "California bay",
+      "species": "Umbellularia californica"
+    },
+    {
+      "name": "California buckeye",
+      "species": "Aesculus californica"
+    },
+    {
+      "name": "California sycamore",
+      "species": "Platanus racemosa"
+    },
+    {
+      "name": "California walnut",
+      "species": "Juglans californica"
+    },
+    {
+      "name": "Canada root",
+      "species": "Asclepias tuberosa"
+    },
+    {
+      "name": "Cancer jalap",
+      "species": "Phytolacca americana"
+    },
+    {
+      "name": "Carrot",
+      "species": "Daucus carota"
+    },
+    {
+      "name": "Wild carrot",
+      "species": "Daucus carota"
+    },
+    {
+      "name": "Carrot weed",
+      "species": "Ambrosia artemisiifolia"
+    },
+    {
+      "name": "Cart track plant",
+      "species": "Plantago major"
+    },
+    {
+      "name": "Catalina ironwood",
+      "species": "Lyonothamnus floribundus ssp. floribundus"
+    },
+    {
+      "name": "Cherry",
+      "species": "Prunus spp."
+    },
+    {
+      "name": "Black cherry",
+      "species": "Prunus serotina"
+    },
+    {
+      "name": "Cabinet cherry",
+      "species": "Prunus serotina"
+    },
+    {
+      "name": "Rum cherry",
+      "species": "Prunus serotina"
+    },
+    {
+      "name": "Whiskey cherry",
+      "species": "Prunus serotina"
+    },
+    {
+      "name": "Wild cherry",
+      "species": "Prunus avium, Prunus serotina"
+    },
+    {
+      "name": "Wild black cherry",
+      "species": "Prunus serotina"
+    },
+    {
+      "name": "Chestnut",
+      "species": "Castanea spp."
+    },
+    {
+      "name": "Chigger flower",
+      "species": "Asclepias tuberosa"
+    },
+    {
+      "name": "Chrysanthemum",
+      "species": "Dendranthema grandiflora, Chrysanthemum morifolium"
+    },
+    {
+      "name": "(True) cinnamon",
+      "species": "Cinnamomum verum"
+    },
+    {
+      "name": "Clove",
+      "species": "Syzygium aromaticum"
+    },
+    {
+      "name": "Clover",
+      "species": "Trifolium spp."
+    },
+    {
+        "name": "Yellow fieldcress",
+        "species": "Rorippa sylvestris"
+      },
+      {
+        "name": "Yellowwood",
+        "species": "Cladrastis lutea, Maclura pomifera"
+      },
+      {
+        "name":   "Yellow coneflower",
+        "species": "Echinacea paradoxa"
+      },
+      {
+        "name": "Zedoary",
+        "species": "Curcuma zedoaria"
+      }
+    ]
+
+    // ------------- Find index Method
+    // create Index of method
+    let index = plants.indexOf("Zedoary");
+    console.log("indexof",index);
+
+  //  create find index  128 sum ans
+  var sss = plants.findIndex(x => x.name ==="Zedoary");
+  document.getElementById("vvvv").innerHTML = sss;
+  console.log("findIndex",sss);
+
+  // find index 128 sum ans
+  let patil = plants.findIndex(x => x.species === 'Curcuma zedoaria');
+  document.getElementById("vvvv").innerHTML = patil;
+  console.log("findIndex2",patil);
+   
+  // find index number check kre ktla no per aplo element che
+  const hi = plants.findIndex(el => el.name >"Gray alder");
+  document.getElementById("vvvv").innerHTML = hi;
+  console.log("findIndex3",hi);
+
+  // Find an element in an array
+  const john = plants.find(person => person.name === 'Zedoary');
+  document.getElementById("vvvv").innerHTML = john;
+  console.log("findIndex4",john);
+
+// ------Find Method Replacing the array element:------
+let obj = plants.find((o, i) => {
+    if (o.name === 'Alder') {
+        plants[i] = { name: 'sachin', species: "Alnus" };
+        return true; // stop searching
+    }
+});
+console.log("findIndex5",plants);
+
+
+// -----------for Each Method------
+
+// forEach 129 no can show in console
+  plants.forEach(name => console.log(name));
+ 
+// using forEach show the all name element index in console
+plants.forEach((element, index, array) => {
+    console.log(element.name); 
+    console.log(index); 
+});
+
+// ------Map method-------
+
+// map add to variable
+const fullNames = plants.map((element, index) => {
+  return {'Add to variable': element['name'] + '  ' + element['species']}
+});
+console.log("map",fullNames)
+
+ // using map And index of 128 sum ans
+ var inde = plants.map(i => i.name).indexOf("Zedoary");
+  document.getElementById("vvvv").innerHTML = inde;
+  console.log("map2",inde);
+  
+  // using map and indexof method 127 sum ans
+  var matchedIndex = plants.map(function (obj) { return obj.name; }).indexOf("Yellow coneflower");
+  document.getElementById("vvvv").innerHTML = matchedIndex;
+  console.log("map3",matchedIndex);
+
+  // -------------map & slice----------  delete element result 128........
+let ee = plants.map((item) => item.name).indexOf("Zedoary");
+if (ee > -1) {
+  plants.splice(index, 1);
+  console.log("map4", plants);
+}
+
+// --------------  map   create new element
+// document.getElementById("vvvv").innerHTML = plants.map(getFullName);
+console.log("map5",plants.map(getFullName))
+function getFullName(item) {
+  return [item.name,item.species].join(",sachin,");
+}
+
+// last index show kare 
+const pp = plants.map(el => el.name).lastIndexOf("Canada root"); 
+console.log("map6",pp)
+
+// map using Transform to a new array show the all name list name ni list batve khali
+const newArray= plants.map(element => element.name);
+  console.log("map7",newArray);
+
+// ----- map method only name variable element can show
+var na = plants.map(function(item) {
+  return item['name'];
+});
+console.log("map8",na);
+
+
+// using some value true or flase
+  const a = plants.some(person => person.name >= "Clove");
+  document.getElementById("vvvv").innerHTML = a;
+   console.log("some",a)
+
+  // keys() Method returns an Array ane badha  element na index show kre che
+  const keys = plants.keys();
+   let text = "";
+  for (let x of keys) {
+  text += x + "<br>";
+}
+console.log("Keys",keys);
+
+// -----------Keys------------------
+const iterator = plants.keys();
+
+for (const key of iterator) {
+  console.log("key1",key);
+}
+
+
+
+// lastIndexOf  for loop farvi ne show kare
+var idx = (function(name, i) {
+  for (i; i--;) {
+    if (Object.values(plants[i]).lastIndexOf(name) !== -1) {
+      return i;
+      break;
+    }
+  }   return -1;
+})("Yellowwood", plants.length);
+document.getElementById("vvvv").innerHTML = idx;
+console.log("lastIndexOf",idx)
+
+
+// ---------length-----------
+let length = plants.length;
+document.getElementById("vvvv").innerHTML = length;
+console.log("length",length)
+
+// -------------- push last element can add -----------------------
+plants.push({"name": "sachin","species": "patil"});
+document.getElementById("vvvv").innerHTML = plants;
+console.log("push",plants);
+
+
+// ----------add method  to shift first ele.remove,pop last ele.remove and update & inseart name variable ------------
+plants.shift(plants.pop(),plants[0,1].name="xyz",plants[1]
+.xst={"name": "Zedoary","species": "Curcuma zedoaria"}); // <=Add index  element
+console.log("shift,pop&add element",plants);
+
+// unshift----------Add element-------
+plants.unshift({"name": "Z","species": "C",});
+console.log("unshift",plants)
+
+
+// remove the dobble objet-----
+var nod = $.grep(plants, function (el) { return el.name!= "Clover"});
+console.log("grep",nod);
+
+
+// ------------------------concat method can use one or more Araay can create 128*2=256----------
+const merged = plants.concat(plants);
+console.log("concat",merged)
+
+// ------------=======fill method- all Araay of object element can some--------
+
+// plants.fill({
+//         "name": "Zedoary",
+//         "species": "Curcuma zedoaria"
+//       });
+// console.log("fill method", plants)
+
+
+// ----------------splice-----------------
+// The splice() method adds and/or removes array elements.
+
+const its = plants ;
+// declare variable
+plants.splice(2, 0, {name:"sachin", species:"patil"});
+// value position no., no of remove Element which is put inside
+console.log ("splice",plants);
+
+// -------------------object assign--------------
+const objectOne = {
+  firstName: 'Santa'
+}
+
+
+const objectTwo = {
+  lastName: 'Claus'
+}
+
+
+const objectCombined = Object.assign(objectOne, objectTwo);
+console.log("assign",objectCombined)
+
+// ------------------ sort method------------
+
+plants.sort();
+// order an array of objects with name
+plants.sort(function (a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+});
+console.log("sort",plants);
+
+// ------------2-------
+plants.sort();
+plants.sort(function (a, b) {
+  if (a.name > b.name) {
+    return -1;
+  }
+  return 0;
+});
+console.log("sort2",plants);
+
+// ------------3---------
+let sortedProducts = plants.sort(
+    (p1, p2) => (p1.name < p2.name) ? 1 : (p1.name > p2.name) ? -1 : 0);
+    console.log("sort3",sortedProducts);
+
+
+ 
+// ------------coptWithin-----------
+plants.copyWithin(127,125)
+console.log("copywithin",plants)
+
+// ----------- key Method------ a method Allvariable na allindex no batay che-----
+const k = Object.keys(plants);
+console.log("key3",k)
+
+// --------------- key object method-- it can show -firstName,lastName,age,eyeColor----
+const plant = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+const key = Object.keys(plant);
+console.log("key",key)
+document.getElementById("vvvv").innerHTML = key;
+
+// loops -----------------------
+
+let textt = "";
+for (let i = 0; i < plants.length; i++) {
+  textt += plants[i] + "<br>";
+}
+document.getElementById("vvvv").innerHTML = textt;
+
+// loops in-------------
+const plantss = {
+        "name":   "Yellow coneflower",
+        "species": "Echinacea paradoxa"
+      }; 
+let txt = "";
+for (let x in plantss) {
+  txt += plantss[x] + "<br>";
+}
+document.getElementById("vvvv").innerHTML = txt;
+console.log("loops in",txt)
+
+// ------ entries() method loops of
+const iterator2 = plants.entries();
+for (const [index, value] of iterator2) {
+  console.log(iterator2.next().value);
+}
+</script>
+</html>
+

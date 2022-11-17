@@ -1,0 +1,293 @@
+@media only screen and (max-width: 710px) {
+    .head .a1 {
+       display: block;
+           }
+    .nav_1{
+        display: none;
+    }
+    .a1:hover ~ .sachin{
+        background-color: #F9F9F9;
+        display: block;
+        z-index: 1;
+        position: absolute;
+        width: 60%;
+    }
+}
+@media only screen and (max-width:710px)
+{ 
+ .head p{
+   display: none;
+ }
+ .b1{
+    display: none;
+ }
+ .b2{
+    display: none;
+ }
+ .b3{
+    display: none;
+ }
+ .sa{
+    display: none;
+ }
+ .p2{
+    display: none;
+ }
+ }
+
+@media only screen and (max-width:710px)
+{
+    .export, .import{
+        display: none;
+    }
+    .nav_2 .dots{
+        display: block;
+    }
+}
+.dots{
+    display: none;
+}
+@media only screen and (max-width:710px)
+{
+     .nav_2 .nav_3 .title{
+        display: block;
+    }
+    .nav_2 .nav_3 .select1{
+        display: block;
+    }
+    .checked{
+        display: none;
+    }
+    .chek{
+        display: none;
+    }
+}
+.search1{
+    padding: 10px;
+  }
+  .select1{
+    display: none;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 100px;
+    border-radius: 3px;
+  }
+.title{
+    display: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px 0px 5px 0px;
+    width: 90%;
+    border: 1px solid lightgray ;
+    border-radius: 3px;
+}
+ 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;} 
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+body{
+    margin:0;
+}
+.se1{
+    padding-top: 150px;
+}
+.a1{
+    display: none;
+}
+.sachin{
+    display: none;
+    margin-top: 10%;
+}
+.a1:hover ~ .sachin{
+    background-color: #F9F9F9;
+    display: block;
+
+}
+#txt1{
+    width:80%;
+    height: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    padding-left: 100px;
+    align-items: center;
+    background-color: whitesmoke;
+    padding-left: 40px; 
+}
+#s1{
+  position: absolute;
+  padding-top: 8px;
+  padding-left: 10px;
+  color: gray;
+}
+.right{
+    display: flex;
+    justify-content: end;
+}
+.menu {
+    position: fixed;
+    height: 100%;
+}
+.nav_1{
+    border-right: 1px solid gainsboro;
+    background-color: #F6F6F6;
+}
+li{
+    display: block;
+    padding: 5px;
+    padding-left: 12px;
+    margin: 0px;
+    
+}
+.fa-home{
+  margin-top: 10px;
+}
+div .active{
+    color: green;
+    border-left: 2px solid green;
+}
+.menu li:hover{
+    background-color: #ccc;
+}
+#all{
+    margin-right: 10px;
+}
+/*center*/
+.col-10{
+    background-color: white;
+}
+.center{
+    width: 100%;
+}
+.center .up{
+    display: flex;
+    height: 50px;
+}
+.center .up .left{
+    display: flex;
+    width: 50%;
+    font-size: 25px;
+    padding: 10px;
+}
+.center .up .right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* padding: 30px; */
+}
+.dots{
+  margin-right: 10px;
+  padding: 7px 9px 7px 9px;
+}
+#ei1{
+  margin-right: 20px;
+}
+.done ul{
+    display: flex;
+}
+.add{
+    border-bottom:2px solid green;
+    padding: 20px;
+}
+.act{
+    padding: 20px;
+}
+.d2{
+    margin: 5px;
+    width: 100%;
+    overflow-x: auto;
+    /* overflow: scroll; */
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.icon{
+    padding: 0px;
+}
+th, td{
+    text-align: left;
+    padding: 15px;
+}
+.th,td{
+    border-bottom: 1px solid lightgray;
+}
+td .active{
+    border-radius: 100px;
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+    padding: 2px 8px;
+    color: black;
+    font-size: 12px;
+}
+.dtwo{
+    display: flex;
+
+}
+  .dtwo .search{
+    padding-left: 10px;
+}
+.search i{
+    position: absolute;
+    margin: 10px 0 0 9px;
+}
+.search input{
+    width: 100%;
+    height: 35px;
+    border: 1px solid lightgray;
+    border-radius: 2px ;
+    padding-left: 35px;
+    font-size: 12px;
+}
+  .search{
+    width: 75%;
+    position: relative;
+    align-items: center;
+}
+.button{
+    display: flex;
+    justify-content: end;
+    width: 60%;
+    height: 30px;
+  
+ }
+.b4{
+    margin-right: 10px;
+}
+.star{
+    display: flex;
+    margin-right: 10px;
+    padding: 4px 5px 0px 4px;
+  }
+  .sa{
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    background-color: white;
+    width: 60px;
+  }
+  #s2{
+    position: absolute;
+    color: gray;
+  }
+  th{
+    color:gray;
+  }
+ 
+

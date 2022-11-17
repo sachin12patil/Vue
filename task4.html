@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>design web page</title>
+    <link rel="stylesheet" href="task4.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+    <div class=" head col-12"
+        style="display:flex;border-bottom: 1px solid gainsboro;padding:15px;background-color: black;">
+        <div class="a1">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="col-2 sachin" style="color:#202223;">
+            <img src="./2.svg">
+            <ul style="font-size: 18px; border-top: 1px solid gray;">
+
+                <li><i class="fa fa-home">&nbsp&nbsp</i>Home</li>
+                <li><i class="fa-solid fa-car">&nbsp&nbsp</i>orders</li>
+                <li class="active"> <i class="fa fa-tag ">&nbsp&nbsp</i>Product</li>
+                <ul style="margin-left: 30px; color: gray; font-size: 15px;">
+                    <li>Inventor</li>
+                    <li>Transfers</li>
+                    <li>collection</li> 
+                    <li>Gift cards</li>
+                    <li>Price List</li>
+                </ul>
+                <li> <i class="fa-solid fa-user">&nbsp&nbsp</i>Customers</li>
+                <li> <i class="fa-sharp fa-solid fa-chart-simple">&nbsp&nbsp</i>Analytics</li>
+                <li> <i class="fa-solid fa-globe">&nbsp&nbsp</i>Marketing</li>
+                <li> <i class="fa-solid fa-circle-chevron-right">&nbsp&nbsp</i>Discount</li>
+                <li> <i class="fa-solid fa-sliders">&nbsp&nbsp</i>Apps</li>
+            </ul>
+            <div style="margin-top: 13%; font-size: 15px;">
+                <p style="color: darkgray; margin-left: 10px;">Sales Chanles<i class="fa fa-plus"
+                        style="float:right;margin-right:10%;"></i>
+                </p>
+            </div>
+            <div style="padding-top: 5%;  font-size: 15px;">
+                <a href="#" style="text-decoration: none;color: black;margin-left: 10px;"><i class="fa-solid fa-store"
+                        style="margin-right:10px" class="active"></i>Online
+                    store<i class="fa-solid fa-eye" style="float: right;margin-right: 10%;"></i></a>
+            </div>
+            <div class="se1" style=" font-size: 15px; margin-top: 60%; margin-left: 10%;">
+                <i class="fa fa-gear" style="float: left;"></i>
+                <p style="padding-left: 15%;">Setting</p>
+            </div>
+        </div>
+        <div class="col-1">
+           <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/f5416ec27e17f00a67f8c2d6603088baa6635c7bc2071b4f6533c8d260fc8644.svg"
+                    style="max-width: 75px;">
+        </div>
+        <div class="col-9">
+            <h3 style="color: gainsboro; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Unsaved Product</h3>
+        </div>
+        <div class="col-2 icon">
+            <button id="bton1" style="background-color: gainsboro;" onclick="page()">Discard</button></a>
+            <button type="submit" id="bton2" onclick="save()">save</button>
+
+        </div>
+    </div>
+    <div class="col-12 menu" style="display: flex;">
+        <div class="col-2 nav_1">
+            <ul>
+                <li><i class="fa fa-home">&nbsp&nbsp</i>Home</li>
+                <li><i class="fa-solid fa-car">&nbsp&nbsp</i>orders</li>
+                <li class="active"> <i class="fa fa-tag ">&nbsp&nbsp</i>Product</li>
+                <ul style="margin-left: 30px; color: gray;">
+                    <li>inventory</li>
+                    <li>transfer</li>
+                    <li>gift card</li>
+                    <li>collection</li>
+                    <li>price lists</li>
+                </ul>
+                <li> <i class="fa-solid fa-user">&nbsp&nbsp</i>Customers</li>
+                <li> <i class="fa-solid fa-signal">&nbsp&nbsp</i>Analytics</li>
+                <li> <i class="fa-solid fa-globe">&nbsp&nbsp</i>Marketing</li>
+                <li> <i class="fa-solid fa-circle-chevron-right">&nbsp&nbsp</i>Discount</li>
+                <li> <i class="fa-solid fa-mobile-retro">&nbsp&nbsp</i>Apps</li>
+            </ul>
+            <div style="margin-top: 13%; font-size: 15px;">
+                <p style="color: darkgray; margin-left: 8%;">Sales Chanles<i class="fa fa-plus"
+                        style="float:right;margin-right:10%;"></i>
+                </p>
+
+            </div>
+            <div style="padding-top: 10%;  font-size: 15px;">
+                <a href="#" style="text-decoration: none;color: black;margin-left: 8%;"><i class="fa-solid fa-store"
+                        style="margin-right:10px" class="active"></i>Online
+                    store<i class="fa-solid fa-eye" style="float: right;margin-right: 10%;"></i></a>
+
+            </div>
+            <div class="se1" style=" font-size: 15px;">
+                <i class="fa fa-gear" style="float: left;"></i>
+                <p style="padding-left: 14%;">Setting</p>
+            </div>
+        </div>
+        <!-- center -->
+        <div class="main col-10">
+            <div class="top">
+                <i class="fa-solid fa-arrow-left-long" id="all" onclick="page()"></i>&nbsp;&nbsp;
+                <span class="add"><b> Add product</b></span>
+            </div>
+            <div class="ml">
+                <div class="left">
+                    <div class="bottom">
+                        <div class="bottom-left">
+                            <div class="title">
+                                <label>Title</label>
+                            </div>
+                            <div class="middle">
+                                <div class="middle-left">
+                                    <input type="text" name="title" id="txt" placeholder="short sleeve t-shirt">
+                                </div>
+                            </div>
+                            <div class="last">
+                                <label>Description</label>
+                            </div>
+                            <div class="texta">
+                                <textarea name="textarea" id="product-description"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="m1">
+                            <h3>Media</h3>
+                        </div>
+                        <div class="add-media">
+                            <form>
+                                <label for="fileUpload" style="margin-left:20%"></label>
+                                <input type="file" id="fileUpload">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="m1">
+                            <h3>pricing</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <div class="prices">
+                                <p style="margin: 10px;">price</p>
+                                <div class="input">
+                                    <input type="text" placeholder="&#x20b9;0.00" class="pre" id="sp">
+                                </div>
+                            </div>
+                            <div class="prices1">
+                                <p style="margin: 10px;">compare at price</p>
+                                <div class="input">
+                                    <input type="text" placeholder="&#x20b9;0.00" class="pre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricecheck">
+                            <input type="checkbox" class="pc">
+                            <label for="">charge tax on this product</label>
+                        </div>
+                        <div class="cost">
+                            <p style="margin: 10px;">Cost per item</p>
+                            <div class="input">
+                                <input type="text" placeholder="&#x20b9;0.00" class="pre" id="cp" oninput="find()">
+                                <div id="pl"></div><br>
+                                <div id="mg"></div>
+                                <p style="color:grey">Customers wont see this</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="shiping">
+                        <div class="s1">
+                            <h3>shiping</h3>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="" id="mycheck" onclick="checkbox()">
+                            <label for="mycheck">This is a phsyical product</label>
+                        </div>
+                        <div id="text" style="display: none;">
+                            <div class="w1">
+
+                                <div class="weight" style="padding-top: 10px ;">WEIGHT</div>
+                                <div class="weight" style="font-size: 14px;">Use to calculate shipping rates at checkout
+                                    and label prices during fulfillment.</div>
+                                <div class="weight" style="font-size:large">weight</div>
+                                <div class="weight"><input type="text" class="weight1" placeholder="0.0"
+                                        style="padding: 5px; width: 80%; border-radius: 3px;">
+                                    <select style="padding: 4px; border-radius: 3px;">
+                                        <option>kg</option>
+                                        <option>lg</option>
+                                        <option>lb</option>
+                                        <option>g</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="customs">
+                                <div class="weight" style="padding-top: 10px ;">customs information</div>
+                                <div class="weight" style="font-size: 14px;">Customs authorities use this information to
+                                    calculate duties when shipping internationally. Shown on printed customs forms.
+                                </div>
+                                <div class="weight" style="font-size:large">Country/Region Of Origin</div>
+                                <div>
+                                    <select style="padding: 5px;">
+                                        <option>select country</option>
+                                        <option>chaina</option>
+                                        <option>angola</option>
+                                        <option>america</option>
+                                        <option>hong cong</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="custm">
+                            <span>Customers wont enter their shipping address or choose a shipping method when
+                                buyingthis
+                                product.</span>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="s1">
+                            <h3>options</h3>
+                        </div>
+                        <div class="choice1">
+                            <input type="checkbox" name="" id="mycheck1" onclick="checkbox1()">
+                            <span>This product has options, like size or color</span>
+                        </div>
+                        <div id="text1" style="display: none;">
+                            <div class="type">
+                                <span>option name</span>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="type-in">
+                            </div>
+                            <div class="type">
+                                <span>option value</span>
+                            </div>
+                            <div class="input">
+                                <input type="text " class="type-in">
+                            </div>
+                            <button class="button" style="padding: 10px; margin-left:2%">done</button>
+                        </div>
+                    </div>
+                    <div class="search-engine">
+                        <div class="s1">
+                            <h3>Search engine listing</h3>
+                        </div>
+                        <div class="choice2">
+                            <span>Add a title and description to see how this product might appear in a search engine
+                                listing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rp">
+                        <div class="right-product">
+                            <h2 class="ps">Product Status</h2>
+                        </div>
+                        <div class="active-select">
+                            <select class="select">
+                                <option>Active</option>
+                                <option>Darft</option>
+                            </select>
+                        </div>
+                        <div class="t1">
+                            <span style="margin:10px 0px 20px 10px;">this product will be available to 2 sales
+                                channels.</span>
+                        </div>
+                        <div class="channel">
+                            <span>SALES CHANNELS AND APPS</span>
+                        </div>
+                        <div class="checkd">
+                            <input type="checkbox" name="onlineabc" class="pl" id="chek2" value="Select all">select all
+                        </div>
+                        <div class="checkd">
+                            <input type="checkbox" id="chek1" class="pl" name="onlineabc" onclick="checkbox2()"
+                                value="online store">online store
+                            <p id="demo" style=" margin: 10px 20px 10px 20px; display:none;"><a href="">schedule
+                                    available</a></p>
+                        </div>
+                        <div class="checkd">
+                            <input type="checkbox" name="onlineabc" class="pl" id="chek2" value="point of sale">point of
+                            sale
+                        </div>
+                        <div class="checkd">
+                            <input type="checkbox" name="onlineabc" class="pl" id="chek2" value="buy button">buy button
+                        </div>
+                    </div>
+                    <div class="po">
+                        <div class="right-organization">
+                            <h4>product organization</h4>
+                        </div>
+                        <div class="type">
+                            <span>Type</span>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="country-input" class="type-in" placeholder="search types">
+                        </div>
+                        <div class="type">
+                            <span>vendor</span>
+                        </div>
+                       
+                        <div class="input" onkeyup="myFunction()">   
+                            <div id="autoComplete">
+                                <input onkeyup="search(this.value)" type="text" id="search-text" 
+                                 placeholder="Type to Search "/>
+                                 <!-- <p id="rockk"><i class="fa-sharp fa-solid fa-circle-plus" style="margin-left: 5%; padding:13px 6px 9px 13px;"></i>
+                                    <span onclick="change()">Add</span></p> -->
+                                <div id="dropdown" style="color: black;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type">
+                            <span>collections</span>
+                        </div>
+                        <div class="input">
+                            <input type="text" class="type-in">
+                        </div>
+                        <div class="type">
+                            <span>Tags</span>
+                        </div>
+                        <div class="Tag" onkeyup="addTag(event)">
+                            <input type="text" onclick="sachin()" class="dropinput" 
+                              id="myInput" onkeyup="patil()" placeholder="find or create tags">
+                              <div id="section">
+                                <section></section>
+                                 <p id="paragraph"></p>
+                                 </div>
+                              <div id="dropdown23" class="MYdropdown-content" class="input-Tag">
+                                <ul id="myUL">
+                                    <p class="rocky"><i class="fa-sharp fa-solid fa-circle-plus" style="margin-left: 20%; padding:19px 7px 9px 30px;"></i><span onclick="newElement()">Add</span></p> 
+                                    <div id="autocompletebox1">
+                                    <label><li class="cb-item"><input type="checkbox" name="check"class="checkbox" id="myCheck0" style="margin-right: 5px;" onchange="updateCheckboxStatus(this)" value="sachin">sachin</label></li>
+                                    <label><li class="cb-item"><input type="checkbox" name="check"class="checkbox" id="myCheck1" style="margin-right: 5px;" onchange="updateCheckboxStatus(this)" value="bussiness">bussiness</label></li>
+                                    <label><li class="cb-item"><input type="checkbox" name="check"class="checkbox" id="myCheck2" style="margin-right: 5px;" onchange="updateCheckboxStatus(this)" value="collections">collections</label></li>
+                                    <label><li class="cb-item"><input type="checkbox" name="check"class="checkbox" id="myCheck3" style="margin-right: 5px;" onchange="updateCheckboxStatus(this)" value="Analytics">Analytics</label></li>
+                                    <label><li class="cb-item"><input type="checkbox" name="check"class="checkbox" id="myCheck5" style="margin-right: 5px;" onchange="updateCheckboxStatus(this)" value="store">store</label></li>
+                                  </div>   
+                                  </ul>
+                                </div>
+                                <div class="tags-container">
+                                </div>
+                              </div>
+                    </div>
+                    <div class="os">
+                        <div class="right-product">
+                            <h4 style="font-size:20px">online store</h4>
+                        </div>
+                        <div class="theme">
+                            <span style="margin-left: 10px;">theme templete</span>
+                            <div class="active-select1">
+                                <select  class="type-in" disabled>
+                                    <option>defult product</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./task4.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

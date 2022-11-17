@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>design web page</title>
+    <link rel="stylesheet" href="task3.css">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class=" head col-12" style="display:flex;border-bottom: 1px solid gainsboro;padding:10px;">
+        <div class="a1">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="col-2" style="display:flex;">
+            <p> <img src="./2.svg" style="max-width: 75px;"></p>
+        </div>
+        <div class="col-8 ">
+            <i class="fa fa-search" id="s1"></i>
+            <input type="text" id="txt1" placeholder="Search">
+        </div>
+        <div class="col-2 right">
+            <div style="border:1px solid lightpink;background-color:lightpink;border-radius: 20px;padding: 5px;">
+                SP</div>&nbsp&nbsp
+            <p style="padding-top: 2%;">sachinpatil...</p>
+        </div>
+    </div>
+    <!-- menu -->
+    <div class="col-12 menu" style="display: flex;">
+        <div class="col-2 nav_1" style="color:#202223;">
+            <ul style="font-size: 15px;">
+                <li><i class="fa fa-home">&nbsp&nbsp</i>Home</li>
+                <li><i class="fa-solid fa-car">&nbsp&nbsp</i>orders</li>
+                <li> <i class="fa fa-tag ">&nbsp&nbsp</i>Product</li>
+                <li> <i class="fa-solid fa-user">&nbsp&nbsp</i>Customers</li>
+                <li class="active"> <i class="fa-sharp fa-solid fa-chart-simple">&nbsp&nbsp</i>Analytics</li>
+                <ul style="margin-left: 30px; color: gray; font-size: 15px;">
+                    <li>Report</li>
+                    <li class="active">live View</li>
+                </ul>
+                <li> <i class="fa-solid fa-globe">&nbsp&nbsp</i>Marketing</li>
+                <li> <i class="fa-solid fa-circle-chevron-right">&nbsp&nbsp</i>Discount</li>
+                <li> <i class="fa-solid fa-sliders">&nbsp&nbsp</i>Apps</li>
+            </ul>
+            <div style="margin-top: 13%; font-size: 15px;">
+                <p style="color: darkgray; margin-left: 10px;">Sales Chanles<i class="fa fa-plus"
+                        style="float:right;margin-right:10%;"></i>
+                </p>
+            </div>
+            <div style="padding-top: 5%;  font-size: 15px;">
+                <a href="#" style="text-decoration: none;color: black;margin-left: 10px;"><i class="fa-solid fa-store"
+                        style="margin-right:10px" class="active"></i>Online
+                    store<i class="fa-solid fa-eye" style="float: right;margin-right: 10%;"></i></a>
+            </div>
+            <div class="se1" style=" font-size: 15px; margin-top: 60%; margin-left: 10%;">
+                <i class="fa fa-gear" style="float: left;"></i>
+                <p style="padding-left: 15%;">Setting</p>
+            </div>
+        </div>
+        <!-- center -->
+        <div class="col-7 main">
+            <img src="./earth img 2.jpg"><img>
+            <div class="center ">
+                <div class="upper">
+                    <h2 class="te">Ruby App Store
+                        <span class="a4">sep 12,2022 at 08:30 am EDT
+                            <i class="fa fa-ellipsis-h" id="f1"></i></span></p>
+                    </h2>
+                    <div class="redio" style="color:white; margin-top: 10px;">
+                        <input type="radio" id="r1" value="order"><span>order</span>
+                        <input type="radio" id="r1" value="visitor"> <span>visitor</span>
+                    </div>
+                </div>
+            </div>
+            <div class="svg">
+                <button style="margin-left: 10px;" id="btn1"><i class="fa-solid fa-minus" id="f2"></i>
+                    <i class="fa-solid fa-plus" id="f2"></i> </button>
+                <select class="world">
+                    <option>world</option>
+                    <option>america</option>
+                    <option>brazil</option>
+                    <option>canada</option>
+                    <option>dedmark</option>
+                    <option>estonia</option>
+                    <option>france</option>
+                    <option>germony</option>
+                    <option>hong-kong</option>
+                    <option>india</option>
+                    <option>japan</option>
+                    <option>kenya</option>
+                    <option>laos</option>
+                    <option>malawi</option>
+                    <option>nepal</option>
+                    <option>oman</option>
+                    <option>peru</option>
+                    <option>poland</option>
+                    <option>panama</option>
+                    <option>qatar</option>
+                    <option>russia</option>
+                    <option>san marino</option>
+                    <option>tonga</option>
+                </select>
+                <button style="margin-right: 10px;"><i class="fa-solid fa-eye" id="f2"></i></button>
+                <button><i class="fa-solid fa-arrows-spin" id="f2"></i></button>
+            </div>
+        </div>
+        <!-- right colum -->
+        <div class="col-4 cen1">
+            <div style="display: flex;">
+                <div class="col-6">
+                    <h4>Visitors Right now</h4>
+                    <P>0</P>
+                </div>
+                <div class="col-6">
+                    <h4>Total Sales</h4>
+                    <P>$0.00</P>
+                    <input type="range" min="0" max="5%">
+                </div>
+            </div>
+                <div style="display: flex;">
+                    <div class="col-6">
+                        <h4>Total sessione</h4>
+                        <P>0</P>
+                        <input type="range" min="0" max="5%">
+                    </div>
+                    <div class="col-6">
+                        <h4>Total order</h4>
+                        <P>0</P>
+                        <input type="range" min="0" max="5%">
+                    </div>
+                </div>
+                <div>
+                    <div class="rb1">
+                        <h4 class="rb2">Top Location</h4>
+                        <p class="rb3"> no location</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="rb1">
+                        <h4 class="rb2">Customers</h4>
+                        <p class="rb3"> no Customers</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="rb1">
+                        <h4 class="rb2">Top Product</h4>
+                        <p class="rb3"> no product</p>
+                    </div>
+                </div>
+        </div> 

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+	<title></title>
+	<style>
+	/* .tagdropbtn {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    width: 90%;
+} */
+
+.tagdropdown {
+    position: relative;
+    display: block;
+}
+
+.tagdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 90%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.tagdropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.tagdropdown-content ul {
+    padding: 0;
+}
+
+.tagdropdown li:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+.less-sticky {
+    /* border-radius: 10px; */
+    background-color: white !important;
+     max-height: 200px;
+    margin-top: 7px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 100;
+    overflow-x: hidden !important;
+ 
+   
+}
+
+.tagdropdown {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+    .tagdropdown > *:last-child {
+      
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s; 
+        position: absolute;
+        left: 0;
+        top: 100%;
+        border: 1px solid #888;
+        background-color: #fff;
+        box-shadow: 1px 2px 4px 1px #666;
+        box-shadow: 1px 2px 4px 1px #4448;
+        min-width: 21%;
+        box-sizing: border-box;
+    }
+    
+    .tagdropdown:focus > *:last-child,
+    .tagdropdown > *:focus ~ *:last-child,
+    .tagdropdown > .less-sticky:last-child:hover {
+        display: block;
+        opacity: 1;
+        transition: 0.15s;
+        pointer-events: auto;
+    }
+
+.cb-item {
+    display: block;
+    margin: 0px;
+    padding: 2px;
+    color: #000;
+}
+
+    .cb-item:hover, .cb-item:hover > a:visited {
+        background-color: gray;
+    }
+
+
+ul{
+/* width: max-content; */
+margin:0;
+padding:0;
+}
+ #tasks{
+    border-radius: 10px;
+    /* position: relative; */
+    background-color: #ffffff; 
+}
+
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+}
+
+
+#type-in {
+    padding: 12px;
+    width: 20%;
+}
+.less-sticky ul{
+    padding: 10px;
+}
+	</style>
+</head>
+<body>
+	<div class="input">
+    <div class="tagdropdown">
+        <input type="text" placeholder="find or create tags" id="type-in" onkeyup="myFunction()">
+        <div class="less-sticky" id="tagautoComplete">
+            <ul id="myUL">
+              <i class="fa-sharp fa-solid fa-circle-plus"></i> add
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="sachin">sachin</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="store">store</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="Animals">Animals</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="bussiness">bussiness</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="collection">collection</a></li> 
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="dog">dog</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="fish">fish</a></li>
+              <li class="cb-item"><a><input type="checkbox" name="check" id="home-text" value="superman">superman</a></li>
+            </ul>
+        </div>
+    </div> 
+</div>
+    <div id="tasks"></div>
+	<script>
+		var patil = {
+  letters: []
+}
+var boxes = document.getElementsByName("check");
+var boxesArr = Array.prototype.slice.call(boxes);
+function letter() {
+  var checkedBoxes = boxesArr.filter((checkbox) => {
+    return checkbox.checked;
+  });
+  patil.letters = checkedBoxes.map((checkbox) => {
+    return checkbox.value;
+  })
+  var Abc = patil.letters.join("<br>");
+  
+  document.getElementById("tasks").innerHTML +=
+ `
+            <div class="task">
+          
+             ${document.getElementById("type-in").innerHTML = Abc}
+        
+          <span class="close">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+                </span>
+            </div>
+        `;
+      
+        var current_tasks = document.getElementsByClassName("close");
+        for (i = 0; i < current_tasks.length; i++) {
+          current_tasks[i].onclick = function () {
+            this.parentNode.remove();
+          }
+         }
+       }
+
+boxes.forEach((checkbox) => {
+  if (checkbox.Event) {
+    checkbox.Event("onchange", letter);
+  } else {
+    checkbox.addEventListener("change", letter, false);
+  }
+})
+
+  window.onload = () => {
+    const tagsContainer = document.querySelector('#tasks');
+    tagsContainer.addEventListener('click', removeTag);
+  }
+  function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("type-in");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+      
+  }
+}
+	</script>
+</body>
+</html>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script>
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+function patil() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("checkboxes");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+</script>
+<style>
+.multiselect {
+  width: 20%;
+}
+#container input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #dddd;
+} 
+</style>
+<body>
+  <div class="multiselect">
+     <div class="selectBox" onclick="showCheckboxes()">
+         <div class="PQR">
+    <div id="container">
+        <input type="text" onkeyup="patil()" class="dropinput" id="myInput"
+        placeholder="find or create tags"/>
+    </div>
+  <div id="checkboxes" class="MYdropdown-content">
+   <a><label for="one"><input type="checkbox" id="one" />Add </label></a>
+    <a><label for="two"><input type="checkbox" id="two" />Address</label></a>
+      <a><label for="three"><input type="checkbox" id="three" />pincode</label></a>
+        <a><label for="four"><input type="checkbox" id="four" />colony</label></a>
+          <a><label for="five"><input type="checkbox" id="five" />plot.no</label></a>
+            <a><label for="six"><input type="checkbox" id="six" />near by</label></a>
+               </div>    
+  </div>
+</div>
+</div>
+    
+  
+</body>
+</head>
+</html>
+
+

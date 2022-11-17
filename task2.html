@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>design web page</title>
+    <link rel="stylesheet" href="task2.css">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="./task2.js"></script>
+</head>
+
+<body>
+    <div class=" head col-12" style="display:flex;border-bottom: 1px solid gainsboro;padding:10px;">
+        <div class="a1">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="col-2 sachin" style="color:#202223;">
+            <img src="./2.svg">
+            <ul style="font-size: 15px; border-top: 1px solid black;">
+                <a href="task5.html" style="text-decoration:none;color:black;">
+                    <li><i class="fa fa-home">&nbsp&nbsp</i>Home</li>
+                </a>
+                <li><i class="fa-solid fa-car">&nbsp&nbsp</i>orders</li>
+                <li class="active"> <i class="fa fa-tag ">&nbsp&nbsp</i>Product</li>
+                <ul style="margin-left: 30px; color: gray; font-size: 15px;">
+                    <li>Inventor</li>
+                    <li>Transfers</li>
+                    <li>collection</li>
+                    <li>Gift cards</li>
+                    <li>Price List</li>
+                </ul>
+                <li> <i class="fa-solid fa-user">&nbsp&nbsp</i>Customers</li>
+                <li> <i class="fa-sharp fa-solid fa-chart-simple">&nbsp&nbsp</i>Analytics</li>
+                <li> <i class="fa-solid fa-globe">&nbsp&nbsp</i>Marketing</li>
+                <li> <i class="fa-solid fa-circle-chevron-right">&nbsp&nbsp</i>Discount</li>
+                <li> <i class="fa-solid fa-sliders">&nbsp&nbsp</i>Apps</li>
+            </ul>
+            <div style="margin-top: 13%; font-size: 15px;">
+                <p style="color: darkgray; margin-left: 10px;">Sales Chanles<i class="fa fa-plus"
+                        style="float:right;margin-right:10%;"></i>
+                </p>
+            </div>
+            <div style="padding-top: 5%;  font-size: 15px;">
+                <a href="#" style="text-decoration: none;color: black;margin-left: 10px;"><i class="fa-solid fa-store"
+                        style="margin-right:10px" class="active"></i>Online
+                    store<i class="fa-solid fa-eye" style="float: right;margin-right: 10%;"></i></a>
+            </div>
+            <div class="se1" style=" font-size: 15px; margin-top: 60%; margin-left: 10%;">
+                <i class="fa fa-gear" style="float: left;"></i>
+                <p style="padding-left: 15%;">Setting</p>
+            </div>
+        </div>
+        <div class="col-2" style="display:flex;">
+            <p> <img src="./2.svg" style="max-width: 75px;"></p>
+        </div>
+        <div class="col-8">
+            <i class="fa fa-search" id="s1"></i>
+            <input type="text" id="txt1" placeholder="Search">
+        </div>
+        <div class="col-2 right">
+            <div style="border:1px solid lightpink;background-color:lightpink;border-radius: 20px;padding: 5px;">
+                SP</div>&nbsp&nbsp
+            <p style="padding-top: 2%;">sachinpatil...</p>
+        </div>
+    </div>
+    <div class="col-12 menu" style="display: flex;">
+        <div class="col-2 nav_1" style="color:#202223;">
+            <ul style="font-size: 15px;">
+                <li onclick="Home()"><i class="fa fa-home">&nbsp&nbsp</i>Home</li>
+                <li onclick="orders()"><i class="fa-solid fa-car">&nbsp&nbsp</i>orders</li>
+                <li class="active" onclick="product()"> <i class="fa fa-tag ">&nbsp&nbsp</i>Product</li>
+                <ul style="margin-left: 30px; color: gray; font-size: 15px;">
+                    <li>Inventor</li>
+                    <li>Transfers</li>
+                    <li>collection</li>
+                    <li>Gift cards</li>
+                    <li>Price List</li>
+                </ul>
+                <li onclick="customers()"> <i class="fa-solid fa-user">&nbsp&nbsp</i>Customers</li>
+                <li onclick="Analytics()"> <i class="fa-sharp fa-solid fa-chart-simple">&nbsp&nbsp</i>Analytics</li>
+                <li onclick="Marketing()"> <i class="fa-solid fa-globe">&nbsp&nbsp</i>Marketing</li>
+                <li onclick="Discount()"> <i class="fa-solid fa-circle-chevron-right">&nbsp&nbsp</i>Discount</li>
+                <li onclick="App()"> <i class="fa-solid fa-sliders">&nbsp&nbsp</i>Apps</li>
+            </ul>
+            <div style="margin-top: 13%; font-size: 15px;">
+                <p style="color: darkgray; margin-left: 10px;">Sales Chanles<i class="fa fa-plus"
+                        style="float:right;margin-right:10%;"></i>
+                </p>
+            </div>
+            <div style="padding-top: 5%;  font-size: 15px;">
+                <a href="#" style="text-decoration: none;color: black;margin-left: 10px;"><i class="fa-solid fa-store"
+                        style="margin-right:10px" class="active"></i>Online
+                    store<i class="fa-solid fa-eye" style="float: right;margin-right: 10%;"></i></a>
+            </div>
+            <div class="se1" style=" font-size: 15px; margin-top: 60%; margin-left: 10%;">
+                <i class="fa fa-gear" style="float: left;"></i>
+                <p style="padding-left: 15%;">Setting</p>
+            </div>
+        </div>
+
+        <div id="Home"></div>
+        <div id="orders"></div>
+        <div id="customers"></div>
+        <div id="Analytics"></div>
+        <div id="Marketing"></div>
+        <div id="Discount"></div>
+        <div id="App"></div>
+        <div class="col-10 nav_2" style="width: 100%;padding: 5px 10px 0px 10px;">
+            <div id="product">
+                <div class="center">
+                    <div class="up">
+                        <div class="left">
+                            <p><b>Products</b></p>
+                        </div>
+                        <div class="right">
+                            <button class="dots"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div class="export" id="ei1"> Export </div>
+                            <div class="import" id="ei1"> Import</div>
+                            <a href="task4.html"><button class="product"
+                                    style="background-color:green; padding: 10px; border-radius: 5px; border:1px solid green; color: white;">
+                                    Add product </button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 nav_3">
+                    <div class="buttom"
+                        style="border: 1px solid lightgray;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                        <div class="done"
+                            style="border-bottom: 1px solid lightgray;background-color: #FFFFFF;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                            <ul>
+                                <li class="add">Add</li>
+                                <li class="act">Active</li>
+                                <li class="act">Draft</li>
+                                <li class="act">Archived</li>
+                            </ul>
+                        </div>
+
+                        <div class="dtwo" style="margin-top: 2%;">
+                            <div class="search">
+                                <i class="fa fa-search" id="s2"></i><input type="text" placeholder="Filter products">
+                            </div>
+                            <div class="button">
+                                <select class="b1">
+                                    <option><b> Product Vender </b></option>
+                                </select>
+                                <select class="b2">
+                                    <option><b> Tagged Width </b></option>
+                                </select>
+                                <select class="b3">
+                                    <option><b> Status </b></option>
+                                </select>
+                                <select class="b4">
+                                    <option><b>more filters</b></option>
+                                </select>
+                                <button class="star" disabled><i class="fa-solid fa-star"></i>
+                                    <p class="p2">saved</p>
+                                </button>
+                                <button class="sa"><b><i class="fa-solid fa-arrows-up-down"></i>sort</b> </button>
+                            </div>
+                        </div>
+                        <div class="search1" style="display: flex;">
+                            <select class="title">
+                                <option value="product title A-Z">product title A-Z</option>
+                                <option value="product title Z-A">product title Z-A</option>
+                                <option value="product type A-Z">product type A-Z</option>
+                            </select>
+                            <button class="select1">select</button>
+                        </div>
+                        <div class="d2">
+                            <table>
+                                <tr class="chek">
+                                    <th><input type="checkbox"></th>
+                                    <th></th>
+                                    <th>Product</th>
+                                    <th>Satus</th>
+                                    <th>Invertory</th>
+                                    <th>Type</th>
+                                    <th>Vendor</th>
+                                </tr>
+                                <tr style="border-top:1px solid lightgray;">
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                                <tr>
+                                    <td class="checked"> <input type="checkbox"></td>
+                                    <td class="icon"><img src="./shopify.jpg" style="width:40px;"></td>
+                                    <td>1045 Product</td>
+                                    <td><input type="button" class="active" value="active" id="btn1"></td>
+                                    <td>92 in stock for 4 variants</td>
+                                    <td>Dresses</td>
+                                    <td>Jaase</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

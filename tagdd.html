@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="x-UA-compatible"content="IE=edge"/>
+  <meta name="viewport"content="width=device-width,intial-scale=1.0"/>
+  <body>
+   <h2> Js Star pattern</h2>
+   <p class="dd"></p>
+  </body>
+  <script>
+// -------------------------Square Star Pattern ---------------------------------------------
+let n = 5;                                                          // row or column count   
+let string = "";                                                   // defining an empty string
+for(let i = 0; i < n; i++) {                                      // external loop
+  for(let j = 0; j < n; j++) {                                   // internal loop
+    string += "*";
+  }
+  string += "\n";                                             // newline after each row
+}
+console.log("Square Star\n",string);                        // printing the string
+
+// Ans:- *****
+// *****
+// *****
+// *****
+// *****
+
+// ------------------------------ Hollow Square Pattern----------
+
+let nn = 5;                                 // row or column count
+let stringg = "";                          // defining an empty string
+for(let i = 0; i < nn; i++) {             // external loop
+  for(let j = 0; j < nn; j++) {          // internal loop
+    if(i === 0 || i === nn - 1) {
+      stringg += "*";
+    }
+    else {
+      if(j === 0 || j === nn - 1) {
+        stringg += "*";
+      }
+      else {
+        stringg += " ";
+      }
+    }
+  }
+  stringg += "\n";            // newline after each row
+}
+console.log("Hollow Square \n",stringg);            // printing the string
+
+// Ans:- *****
+// *   *
+// *   *
+// *   *
+// *****
+
+
+// ------------------------------==Hollow Triangle Star============================================================
+let g = 6;
+let l = "";
+for (let i = 1; i <= g; i++) {
+  // printing star
+  for (let j = 0; j < i; j++) {
+    if(i === g) {
+      l += "*";
+    }
+    else {
+      if (j == 0 || j == i - 1) {
+        l += "*";
+      }
+      else {
+        l += " ";
+      }
+    }
+  }
+  l += "\n";
+}
+console.log("Hollow Triangle Star\n",l);
+
+// *
+// **
+// * *
+// *  *
+// *   *
+// ******
+
+// --------------------------Right Triangle Pattern------------------------------------------------
+
+let d = 5;
+let s = "";
+for (let i = 1; i <= d; i++) {
+  // printing spaces
+  for (let j = 0; j < d - i; j++) {
+    s += " ";
+  }
+  // printing star
+  for (let k = 0; k < i; k++) {
+    s += "*";
+  }
+  s += "\n";
+}
+console.log("Right Triangle Pattern \n",s);
+
+// Ans *
+//    **
+//   ***
+//  ****
+// *****
+
+// --------------------Left Triangle Pattern------------------
+
+let f = 5;
+let x = "";
+for (let i = 1; i <= f; i++) {
+  for (let j = 0; j < i; j++) {
+    x += "*";
+  }
+  x += "\n";
+}
+console.log("left triangle\n",x);
+
+//Ans
+// *
+// **
+// ***
+// ****
+// *****
+
+// =================================Downward Triangle==========---------------------------------
+
+let z = 5;
+let a = "";
+for (let i = 0; i < z; i++) {
+  // printing star
+  for (let j = 0; j < z - i; j++) {
+    a += "*";
+  }
+  a += "\n";
+}
+console.log("Downward Triangle \n",a);
+
+// *****
+// ****
+// ***
+// **
+// *
+
+// ==========================================-----------------Pyramid Pattern---------------------================================
+let v = 5;
+let q = "";
+for (let i = 1; i <= v; i++) {   // External loop
+  for (let j = 1; j <= v - i; j++) {   // printing spaces
+    q += " ";
+  }
+  for (let k = 0; k < 2 * i - 1; k++) {   // printing star
+    q += "*";
+  }
+  q += "\n";
+}
+console.log("pyramid Pattern\n",q);
+// ans *
+//    ***
+//   *****
+//  *******
+// *********
+
+// =================================----Reversed Pyramid Star Pattern-----------------==================================
+
+let w = 5;
+let m = "";
+for (let i = 0; i < w; i++) {  // External loop
+  for (let j = 0; j < i; j++) {  // printing spaces
+    m += " ";
+  }
+  for (let k = 0; k < 2 * (w-i) - 1; k++) {  // printing star
+    m += "*";
+  }
+  m += "\n";
+}
+console.log("Reversed Pyramid Star Pattern\n",m);
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+
+
+// ======================--------------Heart Star Pattern------------------------====================================
+
+var p = 6;
+var str = "";
+for (let i = p / 2; i < p; i += 2) {
+  // print first spaces
+  for (let j = 1; j < p - i; j += 2) {
+    str += " ";
+  }
+  // print first stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  // print second spaces
+  for (let j = 1; j < p - i + 1; j++) {
+    str += " ";
+  }
+  // print second stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  str += "\n";
+}
+// lower part
+// inverted pyramid
+for (let i = p; i > 0; i--) {
+  for (let j = 0; j < p - i; j++) {
+    str += " ";
+  }
+  for (let j = 1; j < i * 2; j++) {
+    str += "*";
+  }
+  str += "\n";
+}
+console.log(str);
+
+
+// ----------------------------------------------------
+var sum = 0;
+for (var i = 1; i <= 10; i++) {
+  sum += i;
+}
+console.log(sum);
+
+  </script>
+</head>
+</html>

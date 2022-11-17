@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>     
+<body>
+<!--Make sure the form has the autocomplete function switched off:-->
+  <div class="Tag" style="width:300px;">
+    <input id="myInput" type="text" placeholder="find or create tags">
+  </div>
+</body>
+</html>
+
+<style>
+
+.Tag{
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  padding: 10px;
+  border: 1px solid lightslategray;
+  font-size: 16px;
+  font: 12px Arial; 
+}
+input[type=text] {
+  background-color: white;
+  width: 100%;
+}
+.Tag-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.Tag-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.Tag-items div:hover {
+  background-color: #e9e9e9; 
+}
+.Tag-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+</style>
+<script>
+    function Tag(inp, arr) {
+  var currentFocus;
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "Tag-list");
+      a.setAttribute("class", "Tag-items");
+      this.parentNode.appendChild(a);
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          b = document.createElement("DIV");
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          b.addEventListener("click", function(e) {
+              inp.value = this.getElementsByTagName("input")[0].value;
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  function closeAllLists(elmnt) {
+    var x = document.getElementsByClassName("Tag-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }  
+}
+
+var patil = ["sachin","Adderess","Animal","Avadh","boll","body","baby","store","city","cat","clock","check","doll","dropdown","colony","place","salmankhan"];
+
+Tag(document.getElementById("myInput"), patil);
+</script>
